@@ -39,11 +39,13 @@
      - Throw all the useful feature into the model, and then view the improved performance
    - Model performance
      - **Baseline**:
-       - RMSE-mean: 2.1425
-       - RMSE-sum: 134.975
+       - RMSE-sum: 134.6954
+       - RMSE-mean: 2.138
+       - RMSE-drop-outliers: 2.0216
      - **Updated**:
-       - RMSE-mean: 
-       - RMSE-sum: 
+       - RMSE-sum: 136.2702
+       - RMSE-mean: 2.163
+       - RMSE-drop-outliers: 2.0349
 
 ## Data Processing Details
 
