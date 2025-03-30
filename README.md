@@ -9,7 +9,41 @@
 2. **Process_data.ipynb**
    - Performs the following data processing steps:
      - Sets the index as datetime format
-     - Handles missing/abnormal values for various features:
+     - Handles missing/abnormal values for various features
+   - Feature engineering:
+     - Add features with moving average data and diff data
+
+3. **Model_data.ipynb**
+   - Implements progressive window training with GRU architecture:
+     - **Initial Split**:
+       - Train: All data until December 31, 2019
+       - Test: January 1-30, 2020 (30-day window)
+     - **Rolling Training Process**:
+       1. Train GRU model on current training set
+       2. Evaluate on next 30-day test window
+       3. Incorporate test window into training data
+       4. Slide window forward and repeat
+     - **GRU Configuration**:
+       - 2 GRU layers (50 units, 20 units)
+       - Dropout regularization (0.2)
+       - Optimizer: Adam(learning_rate=0.001)
+       - Early stopping: patience = 3
+       - Batch size, Epochs: 32, 20
+       - Forecast horizon: 30 days
+     - **Test**:
+       - Evaluate the performance of the model by sum of RMSE
+   - Feature selecting:
+     - Delete feature one by one, and then throw the other features into the model
+     - Get the new model performance, and find the performance declines
+     - Delete all the features that make the model performance worse
+     - Throw all the useful feature into the model, and then view the improved performance
+   - Model performance
+     - **Baseline**:
+       - RMSE-mean: 2.1425
+       - RMSE-sum: 134.975
+     - **Updated**:
+       - RMSE-mean: 
+       - RMSE-sum: 
 
 ## Data Processing Details
 
