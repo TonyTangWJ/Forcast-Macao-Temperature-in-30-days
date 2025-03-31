@@ -47,6 +47,10 @@
        - RMSE-sum: 136.2702
        - RMSE-mean: 2.163
        - RMSE-drop-outliers: 2.0349
+4. **Visualize_data.ipynb**:
+   - Plot the test losses with line chart
+   - Plot the actual temp and predicted temp with scatter
+   - Plot the absolute error of actual and predicted temp with bar chart
 
 ## Data File Details
 
@@ -135,3 +139,9 @@ The dataset was enhanced with rolling statistics and differential features acros
   - `Pressure_Diff_Max_Avg`: (Max - Avg)
   - `Pressure_Diff_Min_Avg`: (Min - Avg)
   - `Pressure_Diff_Max_Min`: (Max - Min)
+
+## Model Performance
+
+![RMSE Losses of Each 30-Day Temperature Prediction](test_losses.png)
+
+![Model Predictions vs Actuals](actual_vs_pred.png)
