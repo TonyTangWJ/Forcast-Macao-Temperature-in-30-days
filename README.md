@@ -1,6 +1,6 @@
 # Forecast Macao Temperature in 30 Days
 
-## File Structure
+## Code File Structure
 
 1. **Catch_data.ipynb**
    - Crawls historical weather data from Weather Underground (2001.01.01 - 2025.03.28)
@@ -46,6 +46,14 @@
        - RMSE-sum: 136.2702
        - RMSE-mean: 2.163
        - RMSE-drop-outliers: 2.0349
+
+## Data File Details
+
+1. **weather_data.csv**: the raw data of Macao weather conditions between 2001.01.01 and 2025.03.28
+2. **weather_data_cleaned.csv**: cleaned data which can be directly thrown into the model
+3. **feature_importance.csv**: how much declines of the model performance when droping each feature
+4. **data_test_losses.csv**: losses of each test (all features in the model)
+5. **data_test_result.csv**: the actual and predicted values of macao average temperatures from 2020 to 2025
 
 ## Data Processing Details
 
