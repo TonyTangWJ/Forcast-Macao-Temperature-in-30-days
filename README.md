@@ -37,6 +37,7 @@
      - Get the new model performance, and find the performance declines
      - Delete all the features that make the model performance worse
      - Throw all the useful feature into the model, and then view the improved performance
+     - The whole process takes more than 6 hours with kaggle GPU P100 accelerator
    - Model performance
      - **Baseline**:
        - RMSE-sum: 134.6954
